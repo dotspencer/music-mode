@@ -1,7 +1,15 @@
 
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var videoId;
+function loadVideo(id){
+  videoId = id;
 
-var videoId = "_ygKP4LT8Hs";
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+}
+
+function idFromUrl(){
+  return window.location.search.match(/id=(.*)/)[1];
+}
+
+loadVideo(idFromUrl());

@@ -3,3 +3,11 @@ $bg-color: #39464e;
 body{
   background-color: $bg-color;
 }
+
+#player{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+}
