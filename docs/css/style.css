@@ -66,9 +66,9 @@ body {
     .controls .button:hover {
       opacity: .8; }
     .controls .button.pause {
-      background-image: url("/img/pause.svg"); }
+      background-image: url("https://dotspencer.github.io/music-mode/img/pause.svg"); }
     .controls .button.restart {
-      background-image: url("/img/restart-previous.svg");
+      background-image: url("https://dotspencer.github.io/music-mode/img/restart-previous.svg");
       box-sizing: border-box;
       border: 8px solid transparent; }
 
