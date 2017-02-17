@@ -83,10 +83,10 @@ body{
       opacity: .8;
     }
     &.pause{
-      background-image: url('../img/pause.svg');
+      background-image: url('/img/pause.svg');
     }
     &.restart{
-      background-image: url('../img/restart-previous.svg');
+      background-image: url('/img/restart-previous.svg');
       box-sizing: border-box;
       border: 8px solid transparent;
     }
