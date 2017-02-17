@@ -46,7 +46,7 @@ p {
   display: inline-block;
   vertical-align: top;
   width: 360px;
-  margin: 5px;
+  margin: 5px 0 0;
   margin-left: 20px; }
 
 .title {

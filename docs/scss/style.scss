@@ -2,6 +2,7 @@
 
 $bg-color: #39464e;
 $fade-white: rgba(255, 255, 255, 0.15);
+$border-radius: 10px;
 
 @mixin inline {
   display: inline-block;
@@ -56,7 +57,7 @@ p{
   background-repeat: no-repeat;
   background-color: #000;
   background-position: center;
-  border-radius: 10px;
+  border-radius: $border-radius;
   box-shadow: 0 0 0 $outside $fade-white;
 }
 .right{
@@ -80,7 +81,7 @@ p{
   background: rgba(255, 255, 255, 0.15);
   padding: 0 50px;
   margin-top: 10px;
-  border-radius: 10px;
+  border-radius: $border-radius;
   user-select: none;
 
   .button{
