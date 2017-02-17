@@ -25,13 +25,13 @@ function updateProgress(){
 }
 
 function play(){
-  play_btn.style.backgroundImage = "url('/img/pause.svg')";
+  play_btn.style.backgroundImage = "url('img/pause.svg')";
   play_btn.classList.add('pause');
   player.playVideo();
 }
 
 function pause(){
-  play_btn.style.backgroundImage = "url('/img/play.svg')";
+  play_btn.style.backgroundImage = "url('img/play.svg')";
   play_btn.classList.remove('pause');
   player.pauseVideo();
 }
