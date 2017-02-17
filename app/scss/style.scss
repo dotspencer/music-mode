@@ -23,6 +23,9 @@ body{
   display: inline-block;
   margin-top: 40px;
 }
+#player{
+  display: none;
+}
 .thumbnail{
   @include inline;
   @include to-fade-in;
@@ -62,6 +65,7 @@ body{
   padding: 0 50px;
   margin-top: 10px;
   border-radius: 10px;
+  user-select: none;
 
   .button{
     width: 48px;

@@ -8,6 +8,9 @@ body {
   display: inline-block;
   margin-top: 40px; }
 
+#player {
+  display: none; }
+
 .thumbnail {
   display: inline-block;
   vertical-align: top;
@@ -47,7 +50,8 @@ body {
   background: rgba(255, 255, 255, 0.15);
   padding: 0 50px;
   margin-top: 10px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  user-select: none; }
   .controls .button {
     width: 48px;
     height: 48px;
