@@ -43,10 +43,9 @@ body{
 }
 .right{
   @include inline;
-  // background-color: lightgreen;
   width: 360px;
-  margin-left: 15px;
-  // min-height: 230px;
+  margin: 5px;
+  margin-left: 20px;
 }
 .title{
   @include to-fade-in;
