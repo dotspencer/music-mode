@@ -28,12 +28,12 @@ body{
   @include to-fade-in;
   $outside: 5px;
   vertical-align: bottom;
-  width: 232px;
-  height: 130.5px;
-  margin: $outside;
-  background-size: contain;
+  width: 240px;
+  height: 180px;
+  margin: 5px;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: #111;
+  background-color: #000;
   background-position: center;
   border-radius: 10px;
   box-shadow: 0 0 0 $outside $fade-white;
@@ -58,10 +58,8 @@ body{
 .controls{
   @include to-fade-in;
   padding: 5px;
-  // border: 4px solid $fade-white;
-  background-color: $fade-white;
-  display: inline-block;
-  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0 50px;
   margin-top: 10px;
   border-radius: 10px;
 
@@ -75,10 +73,10 @@ body{
     cursor: pointer;
     margin-bottom: -3px;
     opacity: 1;
-    transition: .15s all;
+    transition: .15s opacity;
 
     &:hover{
-      opacity: .7;
+      opacity: .8;
     }
     &.pause{
       background-image: url('/img/pause.svg');

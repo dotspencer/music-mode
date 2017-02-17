@@ -4,7 +4,6 @@ var title = document.querySelector('.title');
 
 var controls = document.querySelector('.controls');
 var play_btn = document.querySelector('.play');
-var pause_btn = document.querySelector('.pause');
 var restart_btn = document.querySelector('.restart');
 
 play_btn.addEventListener('click', playPausePress);
@@ -16,6 +15,13 @@ function playPausePress(){
   } else {
     play();
   }
+}
+
+function updateProgress(){
+  requestAnimationFrame(updateProgress);
+
+  var percent = (player.getCurrentTime() / duration) * 100;
+  controls.style.background = "linear-gradient(to right, indianred " + percent + "%, rgba(255, 255, 255, 0.15) 0%)";
 }
 
 function play(){
@@ -34,6 +40,7 @@ function restart(){
   if(restart_btn.classList.contains('spin')){
     return;
   }
+  show(play_btn);
 
   restart_btn.classList.add('spin');
   player.seekTo(0);
@@ -71,7 +78,7 @@ function idFromUrl(){
 
 function setThumbnail(){
   var thumb = document.querySelector('.thumbnail');
-  thumb.style.backgroundImage = "url('https://img.youtube.com/vi/" + videoId + "/maxresdefault.jpg')"
+  thumb.style.backgroundImage = "url('https://img.youtube.com/vi/" + videoId + "/0.jpg')"
 }
 
 function showTitle(){
