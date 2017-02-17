@@ -18,6 +18,7 @@ function onPlayerReady(event) {
   showTitle();
   fadeIn(controls);
   fadeIn(title);
+  fadeIn(thumb);
   event.target.playVideo();
 }
 

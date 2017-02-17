@@ -7,19 +7,26 @@ var play_btn = document.querySelector('.play');
 var pause_btn = document.querySelector('.pause');
 var restart_btn = document.querySelector('.restart');
 
-play_btn.addEventListener('click', play);
-pause_btn.addEventListener('click', pause);
+play_btn.addEventListener('click', playPausePress);
 restart_btn.addEventListener('click', restart);
 
+function playPausePress(){
+  if(play_btn.classList.contains('pause')){
+    pause();
+  } else {
+    play();
+  }
+}
+
 function play(){
-  hide(play_btn);
-  show(pause_btn);
+  play_btn.style.backgroundImage = "url('/img/pause.svg')";
+  play_btn.classList.add('pause');
   player.playVideo();
 }
 
 function pause(){
-  hide(pause_btn);
-  show(play_btn);
+  play_btn.style.backgroundImage = "url('/img/play.svg')";
+  play_btn.classList.remove('pause');
   player.pauseVideo();
 }
 
@@ -64,7 +71,7 @@ function idFromUrl(){
 
 function setThumbnail(){
   var thumb = document.querySelector('.thumbnail');
-  thumb.style.backgroundImage = "url('https://img.youtube.com/vi/" + videoId + "/mqdefault.jpg')"
+  thumb.style.backgroundImage = "url('https://img.youtube.com/vi/" + videoId + "/maxresdefault.jpg')"
 }
 
 function showTitle(){

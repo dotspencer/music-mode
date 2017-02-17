@@ -25,14 +25,18 @@ body{
 }
 .thumbnail{
   @include inline;
-  width: 150px;
-  height: 150px;
+  @include to-fade-in;
+  $outside: 5px;
+  vertical-align: bottom;
+  width: 232px;
+  height: 130.5px;
+  margin: $outside;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #111;
   background-position: center;
   border-radius: 10px;
-  box-shadow: 0 0 0 5px $fade-white;
+  box-shadow: 0 0 0 $outside $fade-white;
 }
 .right{
   @include inline;
@@ -40,13 +44,14 @@ body{
   padding: 5px;
   width: 360px;
   margin-left: 15px;
+  // min-height: 230px;
 }
 .title{
   @include to-fade-in;
   margin-top: 15px;
   padding: 10px 0;
   font-size: 1.6em;
-  white-space: nowrap;
+  // white-space: nowrap;
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -69,14 +74,11 @@ body{
     display: inline-block;
     cursor: pointer;
     margin-bottom: -3px;
-    opacity: .7;
+    opacity: 1;
     transition: .15s all;
-    &:hover{
-      opacity: 1;
-    }
 
-    &.play{
-      background-image: url('/img/play.svg');
+    &:hover{
+      opacity: .7;
     }
     &.pause{
       background-image: url('/img/pause.svg');

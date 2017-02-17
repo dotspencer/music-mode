@@ -11,8 +11,12 @@ body {
 .thumbnail {
   display: inline-block;
   vertical-align: top;
-  width: 150px;
-  height: 150px;
+  transition: all .4s;
+  opacity: 0;
+  vertical-align: bottom;
+  width: 232px;
+  height: 130.5px;
+  margin: 5px;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #111;
@@ -33,7 +37,6 @@ body {
   margin-top: 15px;
   padding: 10px 0;
   font-size: 1.6em;
-  white-space: nowrap;
   font-weight: 200;
   letter-spacing: 1px; }
 
@@ -55,12 +58,10 @@ body {
     display: inline-block;
     cursor: pointer;
     margin-bottom: -3px;
-    opacity: .7;
+    opacity: 1;
     transition: .15s all; }
     .controls .button:hover {
-      opacity: 1; }
-    .controls .button.play {
-      background-image: url("/img/play.svg"); }
+      opacity: .7; }
     .controls .button.pause {
       background-image: url("/img/pause.svg"); }
     .controls .button.restart {

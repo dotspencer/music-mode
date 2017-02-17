@@ -6,7 +6,7 @@
           <polygon points="0,15 15,15 0,26" fill="black"></polygon>
       </mask>
   </defs>
-  <circle cx="15" cy="15" r="13" mask="url(#m)" fill="white"></circle>
-  <rect height="10" width="5" y="3" fill="white"></rect>
-  <rect height="5" width="13" y="12" fill="white"></rect>
+  <circle cx="15" cy="15" r="13" mask="url(#m)" fill="#39464e"></circle>
+  <rect height="10" width="5" y="3" fill="#39464e"></rect>
+  <rect height="5" width="13" y="12" fill="#39464e"></rect>
 </svg>
