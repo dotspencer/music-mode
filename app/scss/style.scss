@@ -3,6 +3,15 @@
 $bg-color: #39464e;
 $fade-white: rgba(255, 255, 255, 0.15);
 
+@mixin inline {
+  display: inline-block;
+  vertical-align: top;
+}
+@mixin to-fade-in {
+  transition: all .4s;
+  opacity: 0;
+}
+
 body{
   background-color: $bg-color;
   text-align: center;
@@ -13,10 +22,6 @@ body{
   // background-color: lightgreen;
   display: inline-block;
   margin-top: 40px;
-}
-@mixin inline{
-  display: inline-block;
-  vertical-align: top;
 }
 .thumbnail{
   @include inline;
@@ -37,10 +42,62 @@ body{
   margin-left: 15px;
 }
 .title{
+  @include to-fade-in;
+  margin-top: 15px;
+  padding: 10px 0;
   font-size: 1.6em;
   white-space: nowrap;
   font-weight: 200;
   letter-spacing: 1px;
+}
+.controls{
+  @include to-fade-in;
+  padding: 5px;
+  // border: 4px solid $fade-white;
+  background-color: $fade-white;
+  display: inline-block;
+  padding: 0 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+
+  .button{
+    width: 48px;
+    height: 48px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: -3px;
+    opacity: .7;
+    transition: .15s all;
+    &:hover{
+      opacity: 1;
+    }
+
+    &.play{
+      background-image: url('/img/play.svg');
+    }
+    &.pause{
+      background-image: url('/img/pause.svg');
+    }
+    &.restart{
+      background-image: url('/img/restart-previous.svg');
+      box-sizing: border-box;
+      border: 8px solid transparent;
+    }
+  }
+}
+.fade-in{
+  opacity: 1;
+}
+.spin{
+  animation: spin .5s ease-in-out;
+}
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
 }
 #player{
   position: absolute;
@@ -48,4 +105,7 @@ body{
   height: 200px;
   bottom: 0;
   left: 0;
+}
+.hidden {
+  display: none !important;
 }

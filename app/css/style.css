@@ -28,10 +28,55 @@ body {
   margin-left: 15px; }
 
 .title {
+  transition: all .4s;
+  opacity: 0;
+  margin-top: 15px;
+  padding: 10px 0;
   font-size: 1.6em;
   white-space: nowrap;
   font-weight: 200;
   letter-spacing: 1px; }
+
+.controls {
+  transition: all .4s;
+  opacity: 0;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: inline-block;
+  padding: 0 20px;
+  margin-top: 10px;
+  border-radius: 10px; }
+  .controls .button {
+    width: 48px;
+    height: 48px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: -3px;
+    opacity: .7;
+    transition: .15s all; }
+    .controls .button:hover {
+      opacity: 1; }
+    .controls .button.play {
+      background-image: url("/img/play.svg"); }
+    .controls .button.pause {
+      background-image: url("/img/pause.svg"); }
+    .controls .button.restart {
+      background-image: url("/img/restart-previous.svg");
+      box-sizing: border-box;
+      border: 8px solid transparent; }
+
+.fade-in {
+  opacity: 1; }
+
+.spin {
+  animation: spin .5s ease-in-out; }
+
+@keyframes spin {
+  to {
+    transform: rotate(-360deg); } }
 
 #player {
   position: absolute;
@@ -39,3 +84,6 @@ body {
   height: 200px;
   bottom: 0;
   left: 0; }
+
+.hidden {
+  display: none !important; }

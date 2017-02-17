@@ -16,7 +16,9 @@ function onYouTubeIframeAPIReady() {
 // The API will call this function when the video player is ready.
 function onPlayerReady(event) {
   showTitle();
-  //event.target.playVideo();
+  fadeIn(controls);
+  fadeIn(title);
+  event.target.playVideo();
 }
 
 // The API calls this function when the player's state changes.
