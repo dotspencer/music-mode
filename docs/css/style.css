@@ -30,7 +30,6 @@ body {
 .right {
   display: inline-block;
   vertical-align: top;
-  padding: 5px;
   width: 360px;
   margin-left: 15px; }
 
@@ -66,6 +65,7 @@ body {
     .controls .button:hover {
       opacity: .8; }
     .controls .button.pause {
+      background-image: url("https://dotspencer.github.io/music-mode/img/play.svg");
       background-image: url("https://dotspencer.github.io/music-mode/img/pause.svg"); }
     .controls .button.restart {
       background-image: url("https://dotspencer.github.io/music-mode/img/restart-previous.svg");

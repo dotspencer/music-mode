@@ -44,7 +44,6 @@ body{
 .right{
   @include inline;
   // background-color: lightgreen;
-  padding: 5px;
   width: 360px;
   margin-left: 15px;
   // min-height: 230px;
@@ -83,6 +82,7 @@ body{
       opacity: .8;
     }
     &.pause{
+      background-image: url('https://dotspencer.github.io/music-mode/img/play.svg'); // preload
       background-image: url('https://dotspencer.github.io/music-mode/img/pause.svg');
     }
     &.restart{
