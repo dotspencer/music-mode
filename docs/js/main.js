@@ -5,6 +5,7 @@ var title = document.querySelector('.title');
 var controls = document.querySelector('.controls');
 var play_btn = document.querySelector('.play');
 var restart_btn = document.querySelector('.restart');
+var welcome = document.querySelector('.welcome');
 
 play_btn.addEventListener('click', playPausePress);
 restart_btn.addEventListener('click', restart);
@@ -65,6 +66,11 @@ function fadeIn(element){
 
 function loadVideo(id){
   videoId = id;
+  if(videoId == null){
+    show(welcome);
+    return;
+  }
+
   setThumbnail();
 
   var tag = document.createElement('script');
@@ -73,7 +79,11 @@ function loadVideo(id){
 }
 
 function idFromUrl(){
-  return window.location.search.match(/id=(.*)/)[1];
+  var match = window.location.search.match(/id=(.*)/);
+  if(match == null || match.length != 2){
+    return null;
+  }
+  return match[1];
 }
 
 function setThumbnail(){
