@@ -121,12 +121,9 @@ p{
     transform: rotate(-360deg);
   }
 }
-#player{
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  bottom: 0;
-  left: 0;
+#player {
+    position: absolute;
+    bottom: 0;
 }
 .hidden {
   display: none !important;
