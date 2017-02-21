@@ -1,6 +1,7 @@
 var videoId;
 var thumb = document.querySelector('.thumbnail');
 var title = document.querySelector('.title');
+var mTitle = document.querySelector('#meta-title');
 
 var controls = document.querySelector('.controls');
 var play_btn = document.querySelector('.play');
@@ -92,7 +93,9 @@ function setThumbnail(){
 }
 
 function showTitle(){
-  title.innerText = player.getVideoData().title;
+  var text = player.getVideoData().title;
+  title.innerText = text;
+  mTitle.innerText = text;
 }
 
 loadVideo(idFromUrl());
