@@ -1,7 +1,6 @@
 var videoId;
 var thumb = document.querySelector('.thumbnail');
 var title = document.querySelector('.title');
-var mTitle = document.querySelector('#meta-title');
 
 var controls = document.querySelector('.controls');
 var play_btn = document.querySelector('.play');
@@ -67,8 +66,15 @@ function fadeIn(element){
 
 function loadVideo(id){
   videoId = id;
+
+  // If no video id is provided in url
   if(videoId == null){
     show(welcome);
+
+    // Set default title
+    var mTitle = document.createElement('title');
+    mTitle.innerText = "YT Music Mode";
+    document.head.appendChild(mTitle);
     return;
   }
 
@@ -93,9 +99,14 @@ function setThumbnail(){
 }
 
 function showTitle(){
+  // Setting title text
   var text = player.getVideoData().title;
   title.innerText = text;
+
+  // Setting meta title
+  var mTitle = document.createElement('title');
   mTitle.innerText = text;
+  document.head.appendChild(mTitle);
 }
 
 loadVideo(idFromUrl());
