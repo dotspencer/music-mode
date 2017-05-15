@@ -24,7 +24,7 @@ p {
   margin-top: 40px; }
 
 #player {
-  display: none; }
+  opacity: 0; }
 
 .thumbnail {
   display: inline-block;

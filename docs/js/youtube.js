@@ -30,7 +30,15 @@ function onPlayerReady(event) {
 // The function indicates that when playing a video (state=1),
 // the player should play for six seconds and then stop.
 function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.ENDED) {
-    hide(play_btn);
+  switch(event.data){
+    case YT.PlayerState.PLAYING:
+      var frame = document.querySelector('iframe');
+      if(!frame.classList.contains('hidden')){
+        hide(frame);
+      }
+      break;
+    case YT.PlayerState.ENDED:
+      hide(play_btn);
+      break;
   }
 }
