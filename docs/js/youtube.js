@@ -1,3 +1,8 @@
+/*
+  YouTube player docs:
+  https://developers.google.com/youtube/player_parameters#Parameters
+*/
+
 // This function creates an <iframe> (and YouTube player)
 // after the API code downloads.
 var player;
