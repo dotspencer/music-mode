@@ -24,7 +24,8 @@ p {
   margin-top: 40px; }
 
 #player {
-  opacity: 0; }
+  /* opacity: 0; */
+}
 
 .thumbnail {
   display: inline-block;
@@ -102,6 +103,7 @@ p {
   bottom: 0; }
 
 .hidden {
-  display: none !important; }
+  /* display: none !important; */
+}
 
 /*# sourceMappingURL=style.css.map */

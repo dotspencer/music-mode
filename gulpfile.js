@@ -3,9 +3,12 @@ var sass = require('gulp-sass');
 
 var browserSync = require('browser-sync').create();
 
-gulp.task('watch', ['browserSync', 'sass'], function (){
-  gulp.watch('docs/scss/**/*.scss', ['sass']);
-  // Other watchers
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'docs'
+    },
+  })
 });
 
 gulp.task('sass', function() {
@@ -17,10 +20,7 @@ gulp.task('sass', function() {
     }))
 });
 
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: 'docs'
-    },
-  })
-})
+gulp.task('default', gulp.series('browserSync', 'sass'), function (){
+  gulp.watch('docs/scss/**/*.scss', ['sass']);
+  // Other watchers
+});

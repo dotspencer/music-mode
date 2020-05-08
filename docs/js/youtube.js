@@ -11,25 +11,33 @@ function onYouTubeIframeAPIReady() {
     height: '390',
     width: '640',
     videoId: videoId,
-    playerVars: {rel: 0},
+    playerVars: {
+      rel: 0,
+    },
     events: {
       'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
+      'onStateChange': onPlayerStateChange,
+    },
   });
 }
 
 // The API will call this function when the video player is ready.
 var duration;
 function onPlayerReady(event) {
+  player.loadPlaylist({
+    list: playlistId,
+    listType: 'playlist',
+    index: playlistIndex,
+    startSeconds: 0,
+  });
+  // event.target.playVideo();
+  duration = player.getDuration();
+
   showTitle();
   fadeIn(controls);
   fadeIn(title);
   fadeIn(thumb);
   updateProgress();
-
-  event.target.playVideo();
-  duration = player.getDuration();
 }
 
 // The API calls this function when the player's state changes.
