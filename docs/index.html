@@ -5,6 +5,17 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/youtube.js" charset="utf-8"></script>
     <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131587593-6"></script>
+    <script>
+      const live = window.location.toString().indexOf('dotspencer.github.io') !== -1;
+      if (live) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-131587593-6');
+      }
+    </script>
   </head>
   <body>
     <div id="player"></div>
