@@ -22,6 +22,7 @@ function onYouTubeIframeAPIReady() {
 // The API will call this function when the video player is ready.
 var duration;
 function onPlayerReady(event) {
+  playerReady = true;
   showTitle();
   fadeIn(controls);
   fadeIn(title);
